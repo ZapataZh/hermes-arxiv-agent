@@ -1,10 +1,24 @@
 {
-  "count": 466,
+  "count": 467,
   "crawled_date_min": "2026-04-15",
-  "crawled_date_max": "2026-07-30",
+  "crawled_date_max": "2026-07-31",
   "published_date_min": "2026-01-16",
   "published_date_max": "2026/06/03",
   "papers": [
+    {
+      "arxiv_id": "2607.26515",
+      "title": "HiFloat4 Format for End-To-End Reinforcement Learning Post-Training of Large Language Models",
+      "authors": "Hei Yi Mak, Shadan Golestan, Hoang Le, Mehran Taghian Jazi, Yunke Peng, Yaoyuan Wang, Yao Wang, Junsong Wang, Tianchi Hu, Fengchen He, Guipeng Hu, Tanzila Rahman, Anandharaju Durai Raju",
+      "affiliations": "Huawei",
+      "published_date": "2026-07-29",
+      "categories": "cs.LG, cs.AI",
+      "abstract": "We present, to our knowledge, the first end-to-end FP4 RL post-training, in which both the rollout and training policies, including their forward and backward passes, operate at 4-bit precision. A systematic study reveals that the dominant source of degradation in FP4 RL is not training-side quantization error but rollout activation quantization: outliers stretch the dynamic range so far that a large number of activation values underflow to zero under FP4. Counterintuitively, restoring the training policy to higher precision while keeping the rollout in FP4 makes accuracy worse than full FP4 baseline, exposing rollout-training mismatch as the principal failure mode and ruling out standard pretraining-style fixes. We address this with Rollout Residual Quantization (Rollout-ResQ): a single residual correction term constrained to a hardware-friendly sparsity pattern, added only to the FP4 rollout matmul -- a lightweight correction that recovers most of the precision lost to outlier-driven underflow without inflating the rollout's compute footprint. On Qwen2.5-3B and Qwen2.5-Math-7B, Rollout-ResQ paired with the HiFloat4 (HiF4) format -- whose three-level hierarchical scaling preserves resolution under FP4's tight 4-bit budget -- closes the accuracy gap to BF16 from 4.9% to 1.1%, bringing fully quantized FP4 RL within striking distance of full precision. Applied to the open-standard MXFP4, the same recipe narrows the gap from 13.6% to 5.3%, revealing that FP4 format choice is a key factor that determines the ceiling on recoverable accuracy. Together, these results establish HiF4 as the enabling format for end-to-end FP4 RL post-training, and Rollout-ResQ as the activation-side mechanism that makes the gap to BF16 closable.",
+      "summary_cn": "本文首次实现大语言模型端到端FP4强化学习后训练，推理和训练阶段均采用4位精度。研究发现性能下降主因是推理激活量化中异常值导致大量激活值下溢为零，而非训练侧量化误差。提出Rollout-ResQ残差量化方法和HiFloat4格式，在Qwen2.5-3B和Qwen2.5-Math-7B上将与BF16精度差距从4.9%缩小至1.1%，使全量化FP4后训练接近全精度水平。",
+      "pdf_filename": "2607.26515.pdf",
+      "crawled_date": "2026-07-31",
+      "notes": "",
+      "pdf_url": "https://arxiv.org/pdf/2607.26515"
+    },
     {
       "arxiv_id": "2607.25180",
       "title": "Bekko Embedding: Parameter-Efficient Multilingual Retrieval with Ultra-Compact Encoders",
